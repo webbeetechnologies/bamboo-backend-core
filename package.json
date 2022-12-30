@@ -1,5 +1,5 @@
 {
-  "name": "bamboo-backend-core",
+  "name": "@mythli/bamboo-backend-core",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
