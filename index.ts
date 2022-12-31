@@ -1,8 +1,6 @@
 let moneys = 100;
 
 export const yolo = (lifeEnjoyment: number) => {
-  throw new Error("Always YOLO!!");
-
   return lifeEnjoyment >= 100 ? "yolo" : "no yolo";
 };
 
