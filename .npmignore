@@ -29,7 +29,3 @@ yarn-error.log*
 output.txt
 .eslintcache
 .prettiercache
-
-# build files
-dist
-build
