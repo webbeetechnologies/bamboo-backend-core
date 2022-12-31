@@ -10,7 +10,7 @@ export const getLoan = (amount: number) => {
   }
 
   moneys -= amount;
-  moneys -=            amount;
+  moneys -= amount;
 
   return amount;
 };
