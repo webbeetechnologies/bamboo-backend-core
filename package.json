@@ -2,7 +2,7 @@
   "name": "@webbeetechnologies/bamboo-backend-core",
   "version": "1.0.6",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "test:ci": "jest --config jestconfig.json --ci --reporters='default' --reporters='./github-actions-reporter'",
