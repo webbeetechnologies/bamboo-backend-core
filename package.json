@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "test:ci": "jest --ci --reporters='default' --reporters='./github-actions-reporter'"
+    "test:ci": "jest --config jestconfig.json --ci --reporters='default' --reporters='./github-actions-reporter'"
   },
   "repository": {
     "type": "git",
