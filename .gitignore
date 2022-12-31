@@ -1,16 +1,13 @@
+# npm
+node_modules
+
 #ide configuration
 .idea
 .vscode
 
-node_modules
-
 # istanbul
 coverage
 *.lcov
-
-# build files
-dist
-build
 
 # dotenv environment variable files
 .env
@@ -31,3 +28,8 @@ yarn-error.log*
 # misc
 output.txt
 .eslintcache
+.prettiercache
+
+# build files
+dist
+build

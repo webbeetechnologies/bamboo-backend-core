@@ -28,3 +28,4 @@ yarn-error.log*
 # misc
 output.txt
 .eslintcache
+.prettiercache
