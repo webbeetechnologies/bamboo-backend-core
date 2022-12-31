@@ -1,24 +1,16 @@
-console.log('Try npm run lint/fix!');
+let moneys = 100;
 
-const longString =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut aliquet diam.';
+export const yolo = (lifeEnjoyment: number) => {
+  return lifeEnjoyment >= 100 ? 'yolo' : 'no yolo';
+};
 
-const trailing = 'Semicolon';
-
-const why = 'am I tabbed?';
-
-export function doSomeStuff(
-  withThis: string,
-  andThat: string,
-  andThose: string[]
-) {
-  //function on one line
-  if (!andThose.length) {
-    return false;
+export const getLoan = (amount: number) => {
+  if (amount > moneys) {
+    throw new Error('You are too poor to get a loan');
   }
-  console.log(withThis);
-  console.log(andThat);
-  console.dir(andThose);
-  return;
-}
-// TODO: more examples
+
+  moneys -= amount;
+  moneys -=            amount;
+
+  return amount;
+};
