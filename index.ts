@@ -1,7 +1,7 @@
 let moneys = 100;
 
 export const yolo = (lifeEnjoyment: number) => {
-    throw new Error('Not implemented');
+    // throw new Error('Not implemented');
 
     return lifeEnjoyment >= 100 ? 'yolo' : 'no yolo';
 };
