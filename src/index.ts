@@ -5,8 +5,8 @@ export const yolo = (lifeEnjoyment: number) => {
 };
 
 export const getLoan = (amount: number) => {
-  if (amount >       moneys) {
-          throw new Error('You are too poor to get a loan');
+  if (amount > moneys) {
+    throw new Error('You are too poor to get a loan');
   }
 
   moneys -= amount;
