@@ -7,10 +7,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v1
         with:
-          node-version: "19"
-      - run: npm run fix
+          node-version: '19'
+      - run: yarn install
+      - run: yarn run fix
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
