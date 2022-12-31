@@ -1,8 +1,9 @@
+# npm
+node_modules
+
 #ide configuration
 .idea
 .vscode
-
-node_modules
 
 # istanbul
 coverage
