@@ -31,15 +31,6 @@ const customers = () => defaultData.customers;
 const bills = () => defaultData.bills;
 
 const createGraphQlSchema = () => {
-  const BillType = new GraphQLObjectType({
-    name: 'Bill',
-    fields: {
-      id: {type: GraphQLInt},
-      customerId: {type: GraphQLInt},
-      amount: {type: GraphQLInt},
-    },
-  });
-
   /*
 
   id
@@ -52,7 +43,7 @@ deleteDate
    */
 
   const UserBlockType = new GraphQLObjectType({
-    name: 'Customer',
+    name: 'UserBlock',
     fields: {
       id: {type: GraphQLInt},
       name: {type: GraphQLString},

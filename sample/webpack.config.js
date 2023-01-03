@@ -3,7 +3,7 @@ const path = require('path'),
   webpack = require('webpack');
 
 module.exports = {
-  optimization: {
+  /*optimization: {
     splitChunks: {
       chunks: 'async',
       minSize: 20000000000000000,
@@ -25,12 +25,15 @@ module.exports = {
         },
       },
     },
-  },
+  },*/
   entry: {
     worker: './src/worker.ts',
   },
 
   output: {
+    asyncChunks: false,
+    chunkFormat: 'array-push',
+    chunkLoading: 'import-scripts',
     path: path.resolve(__dirname, 'graphiql/build'),
     filename: '[name].js',
   },
@@ -47,7 +50,7 @@ module.exports = {
             options: {
               transpileOnly: true,
               happyPackMode: true,
-              plugins: ['dynamic-import-webpack', 'remove-webpack'],
+              // plugins: ['dynamic-import-webpack', 'remove-webpack'],
             },
           },
         ],
