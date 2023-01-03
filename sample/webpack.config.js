@@ -2,99 +2,68 @@ const path = require('path'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
   webpack = require('webpack');
 
-module.exports = {
-  /*optimization: {
-    splitChunks: {
-      chunks: 'async',
-      minSize: 20000000000000000,
-      minRemainingSize: 0,
-      minChunks: 1,
-      maxAsyncRequests: 30,
-      maxInitialRequests: 30,
-      enforceSizeThreshold: 50000,
-      cacheGroups: {
-        defaultVendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          reuseExistingChunk: true,
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
-        },
-      },
-    },
-  },*/
-  entry: {
-    worker: './src/worker.ts',
-  },
+module.exports = (env, argv) => {
+  const isProduction = argv.mode === 'production';
 
-  output: {
-    asyncChunks: false,
-    chunkFormat: 'array-push',
-    chunkLoading: 'import-scripts',
-    path: path.resolve(__dirname, 'graphiql/build'),
-    filename: '[name].js',
-  },
-  mode: 'development',
-  devtool: 'inline-source-map',
-  watch: true,
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: [
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-              happyPackMode: true,
-              // plugins: ['dynamic-import-webpack', 'remove-webpack'],
-            },
-          },
-        ],
-      },
-      /*{
-        test: /\.js$/,
-        include: [path.resolve(__dirname, 'src')],
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              plugins: ['dynamic-import-webpack', 'remove-webpack'],
-            },
-          },
-        ],
-      },*/
-    ],
-  },
-  resolve: {
-    extensions: ['.ts', '.js'],
-    fallback: {
-      crypto: false,
-      fs: false,
-      path: false,
-      'react-native-sqlite-storage': false,
+  return {
+    entry: {
+      worker: './src/worker.ts',
     },
-  },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'graphiql/build'),
+
+    output: {
+      asyncChunks: false,
+      chunkFormat: 'array-push',
+      chunkLoading: 'import-scripts',
+      path: path.resolve(__dirname, 'graphiql/build'),
+      filename: '[name].js',
     },
-    port: 9000,
-  },
-  plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
+    mode: isProduction ? 'production' : 'development',
+    devtool: isProduction ? false : 'eval-source-map',
+    watch: !isProduction,
+    module: {
+      rules: [
         {
-          from: path.resolve(__dirname, 'graphiql/build/worker.js'),
-          to: path.resolve(__dirname, 'graphiql/public'),
+          test: /\.ts$/,
+          use: [
+            {
+              loader: 'ts-loader',
+              options: {
+                transpileOnly: true,
+                happyPackMode: true,
+              },
+            },
+          ],
         },
       ],
-    }),
-    /* new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 1,
-    }),*/
-  ],
+    },
+    resolve: {
+      extensions: ['.ts', '.js'],
+      fallback: {
+        crypto: false,
+        fs: false,
+        path: false,
+        'react-native-sqlite-storage': false,
+      },
+    },
+    devServer: {
+      static: {
+        directory: path.join(__dirname, 'graphiql/build'),
+      },
+      port: 9000,
+      headers: {
+        'Cross-Origin-Opener-Policy': 'same-origin',
+        'Cross-Origin-Embedder-Policy': 'require-corp',
+      },
+    },
+    plugins: [
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, 'graphiql/build/worker.js'),
+            to: path.resolve(__dirname, 'graphiql/public'),
+          },
+        ],
+      }),
+    ].filter(Boolean),
+  };
 };

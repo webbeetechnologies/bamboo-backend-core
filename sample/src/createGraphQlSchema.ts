@@ -10,9 +10,9 @@ import {
 
 import {dataSource} from './DatabaseConnection';
 
-dataSource.initialize();
-
 console.log('aaa');
+
+const isInitialized = false;
 
 const defaultData = {
   customers: [
@@ -79,11 +79,19 @@ deleteDate
   const rootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
-      customers: {
+      userblocks: {
         type: new GraphQLList(UserBlockType),
         // @ts-ignore
         resolve: async (parent, args) => {
-          const data = await dataSource.query('SELECT * FROM user_blocks');
+          if (!isInitialized) {
+            await dataSource.initialize();
+          }
+
+          const data = await dataSource
+
+            .createQueryRunner()
+            .query('SELECT * FROM user_blocks');
+
           return data;
         },
       },
