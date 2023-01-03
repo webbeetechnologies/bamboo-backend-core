@@ -1,0 +1,16 @@
+# Ignore compiled output
+/dist
+
+# Ignore package-lock.json
+/package-lock.json
+/node_modules
+
+
+# yarn
+yarn-debug.log*
+yarn-error.log*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
