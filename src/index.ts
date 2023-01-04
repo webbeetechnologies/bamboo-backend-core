@@ -9,7 +9,6 @@ export const yolo = (lifeEnjoyment: number) => {
   return lifeEnjoyment >= 100 ? 'yolo' : 'no yolo';
 };
 
-
 /**
  * With this function, you can get a loan of any amount. It has a very sophisticated algorithm that will determine whether you are eligible for a loan or not.
  *
