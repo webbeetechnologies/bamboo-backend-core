@@ -42,7 +42,7 @@ The blueprint-nodejs project is a boilerplate for creating backend libraries wit
 - If you did not follow this rules, your epics are not considered to be done.
 
 ## Debugging with IntelliJ
-- debug configuration is included in the `.run` folder
+- debug configuration is included in the `.run` folder and should work out of the box
 
 ## Credit
 
