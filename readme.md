@@ -28,18 +28,21 @@ The blueprint-nodejs project is a boilerplate for creating backend libraries wit
   - `release.yml` - to publish to our private registry if you create a release in github
   - `tests.yml` - runs tests if you push or pull
 - Jest
-  - Runs tests in the __tests__ folder or with the .spec.ts extension
+  - Runs tests in the `__tests__` folder or with the .spec.ts extension
   - 80 % coverage requirement
 - [gts (Google Typescript Style)](https://github.com/google/gts)
   - Typescript code style including prettier, eslint, tsconfig etc according to what google thinks makes sense.
+- .run folder with debugging configuration for Intelij
 
 ## Rules
 - Have a sample application in the sample folder which uses your library. This is for you to play around with it while developing and for others to see how to use it.
 - Write unit tests directly in your code and not in a separate directory. Postfix them with `NAME_OF_YOUR_FILE.spec.ts`.
-- Write e2e tests in the __tests__ directory.
+- Write e2e tests in the `__tests__` directory.
 - Create a readme.md for your project which includes a "getting started" section with instructions on how to install and use your library. Make sure that getting started is easy.
 - If you did not follow this rules, your epics are not considered to be done.
 
+## Debugging with IntelliJ
+- debug configuration is included in the `.run` folder
 
 ## Credit
 
@@ -48,3 +51,7 @@ The blueprint-nodejs project is a boilerplate for creating backend libraries wit
 - [Auto formatting code using prettier and github actions by Mike Skelton](https://mskelton.medium.com/auto-formatting-code-using-prettier-and-github-actions-ed458f58b7df)
 - [Github checks documentation](https://docs.github.com/en/rest/checks?apiVersion=2022-11-28)
 - [Google Typescript Style](https://google.github.io/styleguide/tsguide.html)
+
+## ToDo:
+- Add debug tutorial for vscode
+- Add CI&CD 
