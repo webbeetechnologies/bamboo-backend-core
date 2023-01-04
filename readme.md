@@ -23,8 +23,9 @@ The blueprint-nodejs project is a boilerplate for creating backend libraries wit
   - `npm run test` - runs tests including code coverage requirements
   - `npm run compile` - compiles the code to the build folder, runs automatically on release
   - `npm run fix` - runs gts fix to normalize code style, runs automatically on push
+  - `npm run doc:generate` - generates documentation from the code to the `docs` folder, runs automatically on push/pr
 - Github workflows
-  - `format.yml` - runs gts fix on push to normalize code style
+  - `format.yml` - runs gts fix on push to normalize code style and publish an api reference to the `/docs` folder
   - `release.yml` - to publish to our private registry if you create a release in github
   - `tests.yml` - runs tests if you push or pull
 - Jest
@@ -45,12 +46,13 @@ The blueprint-nodejs project is a boilerplate for creating backend libraries wit
 - debug configuration is included in the `.run` folder and should work out of the box
 
 ## Credit
-
 - [Jest and github actions by Pedro Fonseca](https://medium.com/swlh/jest-and-github-actions-eaf3eaf2427d)
 - [Jest and github actions by Joel Hooks](https://joelhooks.com/jest-and-github-actions/)
 - [Auto formatting code using prettier and github actions by Mike Skelton](https://mskelton.medium.com/auto-formatting-code-using-prettier-and-github-actions-ed458f58b7df)
 - [Github checks documentation](https://docs.github.com/en/rest/checks?apiVersion=2022-11-28)
 - [Google Typescript Style](https://google.github.io/styleguide/tsguide.html)
+- [Typedoc](https://typedoc.org/)
+- [Typedoc markdown plugin](https://github.com/tgreyuk/typedoc-plugin-markdown)
 
 ## ToDo:
 - Add debug tutorial for vscode
