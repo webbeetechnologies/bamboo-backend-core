@@ -55,3 +55,4 @@ The blueprint-nodejs project is a boilerplate for creating backend libraries wit
 ## ToDo:
 - Add debug tutorial for vscode
 - Add CI&CD 
+- Add API reference generation action
