@@ -9,8 +9,9 @@ The blueprint-nodejs project is a boilerplate for creating backend libraries wit
 
 ## Getting started
 - Create a new repo using this repo as a template
-- Checkout your repo, create a `dev`branch and push it to github. This is important before the next step as the next step requires that the `tests.yml` github action has run at least once.
-- Go to Settings -> Branches -> Add rule -> Branch name pattern: `main` -> tick
+- Checkout your repo, create a `dev` branch and push it to github. This is important before the next step as the next step requires that the `tests.yml` github action has run at least once.
+- Protect your `main` branch. 
+  - Go to Settings -> Branches -> Add rule -> Branch name pattern: `main` -> tick
   - Require branches to be up to date before merging
   - Require status checks to pass before merging
   - Select `tests` action
@@ -19,7 +20,7 @@ The blueprint-nodejs project is a boilerplate for creating backend libraries wit
 
 ## Included
 - Npm scripts
-  - `npm run start` - starts the sample/index.ts in watch mode with nodemon, restarts it if the code changes
+  - `npm run start` - starts the `sample/index.ts` in watch mode with nodemon, restarts it if the code changes
   - `npm run test` - runs tests including code coverage requirements
   - `npm run compile` - compiles the code to the build folder, runs automatically on release
   - `npm run fix` - runs gts fix to normalize code style, runs automatically on push
@@ -28,17 +29,17 @@ The blueprint-nodejs project is a boilerplate for creating backend libraries wit
   - `release.yml` - to publish to our private registry if you create a release in github
   - `tests.yml` - runs tests if you push or pull
 - Jest
-  - Runs tests in the `__tests__` folder or with the .spec.ts extension
+  - Runs tests in the `__tests__` folder or with the `.spec.ts` extension
   - 80 % coverage requirement
 - [gts (Google Typescript Style)](https://github.com/google/gts)
   - Typescript code style including prettier, eslint, tsconfig etc according to what google thinks makes sense.
-- .run folder with debugging configuration for Intelij
+- InteliJ debug config in the `.run` folder
 
 ## Rules
 - Have a sample application in the sample folder which uses your library. This is for you to play around with it while developing and for others to see how to use it.
 - Write unit tests directly in your code and not in a separate directory. Postfix them with `NAME_OF_YOUR_FILE.spec.ts`.
 - Write e2e tests in the `__tests__` directory.
-- Create a readme.md for your project which includes a "getting started" section with instructions on how to install and use your library. Make sure that getting started is easy.
+- Create a `readme.md` for your project which includes a "getting started" section with instructions on how to install and use your library. Make sure that getting started is easy.
 - If you did not follow this rules, your epics are not considered to be done.
 
 ## Debugging with IntelliJ
