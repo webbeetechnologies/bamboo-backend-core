@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/src/index.js",
   "scripts": {
-    "start": "nodemon src/index.ts",
+    "start": "nodemon sample/index.ts",
     "test": "jest --config jestconfig.json",
     "test:ci": "jest --config jestconfig.json --ci --reporters='default' --reporters='./github-actions-reporter'",
     "lint": "gts lint",
