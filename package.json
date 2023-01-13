@@ -13,6 +13,7 @@
     "compile": "tsc",
     "fix": "gts fix",
     "ci": "rm -rf node_modules && yarn install --immutable && yarn compile",
+    "doc:generate": "typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts",
     "prepare": "yarn run compile",
     "pretest": "yarn run compile",
     "posttest": "yarn run lint"
@@ -36,7 +37,10 @@
     "nodemon": "^2.0.20",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
-    "typescript": "~4.4.0"
+    "typescript": "~4.4.0",
+
+    "typedoc": "^0.23.23",
+    "typedoc-plugin-markdown": "^3.14.0"
   },
   "dependencies": {
     "dotenv": "^16.0.3",

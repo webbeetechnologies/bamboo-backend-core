@@ -29,7 +29,7 @@ With this function, you can get a loan of any amount. It has a very sophisticate
 
 #### Defined in
 
-[index.ts:18](https://github.com/webbeetechnologies/blueprint-nodejs/blob/9e5ff82/src/index.ts#L18)
+[index.ts:20](https://github.com/webbeetechnologies/bamboo-backend-core/blob/16fd869/src/index.ts#L20)
 
 ___
 
@@ -51,4 +51,4 @@ This function will determine whether you enjoy your life and if so, return 'yolo
 
 #### Defined in
 
-[index.ts:8](https://github.com/webbeetechnologies/blueprint-nodejs/blob/9e5ff82/src/index.ts#L8)
+[index.ts:10](https://github.com/webbeetechnologies/bamboo-backend-core/blob/16fd869/src/index.ts#L10)
