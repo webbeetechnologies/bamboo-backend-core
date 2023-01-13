@@ -77,8 +77,6 @@ On top of that it sets up a basic structure for a database based project, comple
 - [Auto formatting code using prettier and github actions by Mike Skelton](https://mskelton.medium.com/auto-formatting-code-using-prettier-and-github-actions-ed458f58b7df)
 - [Github checks documentation](https://docs.github.com/en/rest/checks?apiVersion=2022-11-28)
 - [Google Typescript Style](https://google.github.io/styleguide/tsguide.html)
-- [Kysely Github](https://github.com/koskimas/kysely)
-- [Kysely Documentation](https://koskimas.github.io/kysely/)
 
 ## Database structure 
 ![](./resources/db_structure.png)
