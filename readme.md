@@ -37,6 +37,7 @@ On top of that it sets up a basic structure for a database based project, comple
   - `yarn run test:watch` - runs tests in watch mode re-running related tests when code changes
   - `yarn run compile` - compiles the code to the build folder, runs automatically on release
   - `yarn run fix` - runs gts fix to normalize code style, runs automatically on push
+  - `yarn doc:generate` - generates markdown documentation into the `./doc` folder, runs automatically on push
 - **Database scripts**
   - `yarn migration:run` - runs all migrations in the `db/migrations` folder
   - `yarn migration:make` - creates a new migration file in the `db/migrations` folder
