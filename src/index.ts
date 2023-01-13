@@ -1,4 +1,6 @@
-let moneys = 100;
+import getConfig from './getConfig';
+
+let loaned = 0;
 
 /**
  * This function will determine whether you enjoy your life and if so, return 'yolo' and if not, return 'no yolo'
@@ -16,11 +18,11 @@ export const yolo = (lifeEnjoyment: number) => {
  * @param amount - The amount of money you want to get
  */
 export const getLoan = (amount: number) => {
-  if (amount > moneys) {
+  loaned += amount;
+
+  if (loaned > getConfig().maxLoan) {
     throw new Error('You are too poor to get a loan');
   }
-
-  moneys -= amount;
 
   return amount;
 };
