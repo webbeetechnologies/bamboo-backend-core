@@ -39,6 +39,7 @@ On top of that it sets up a basic structure for a database based project, comple
   - `yarn run test:watch` - runs tests in watch mode re-running related tests when code changes
   - `yarn run compile` - compiles the code to the build folder, runs automatically on release
   - `yarn run fix` - runs gts fix to normalize code style, runs automatically on push
+  - `yarn doc:generate` - generates markdown documentation into the `./doc` folder, runs automatically on push
 - **Database scripts**
   - `yarn migration:run` - runs all migrations in the `db/migrations` folder
   - `yarn migration:make` - creates a new migration file in the `db/migrations` folder
@@ -78,8 +79,6 @@ On top of that it sets up a basic structure for a database based project, comple
 - [Auto formatting code using prettier and github actions by Mike Skelton](https://mskelton.medium.com/auto-formatting-code-using-prettier-and-github-actions-ed458f58b7df)
 - [Github checks documentation](https://docs.github.com/en/rest/checks?apiVersion=2022-11-28)
 - [Google Typescript Style](https://google.github.io/styleguide/tsguide.html)
-- [Kysely Github](https://github.com/koskimas/kysely)
-- [Kysely Documentation](https://koskimas.github.io/kysely/)
 
 ## Database structure 
 ![](./resources/db_structure.png)
