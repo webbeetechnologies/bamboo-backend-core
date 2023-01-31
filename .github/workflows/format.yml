@@ -2,7 +2,7 @@ name: Format
 on: [push, pull_request]
 jobs:
   format:
-    runs-on: ubuntu-latest
+    runs-on: bamboo
     steps:
       - uses: actions/checkout@v2
         with:
