@@ -5,9 +5,9 @@
   "main": "build/cmd/index.js",
   "scripts": {
     "start": "nodemon -r dotenv/config cmd/index.ts",
-    "test": "jest --config jestconfig.json",
-    "test:watch": "jest --config jestconfig.json --watch --collectCoverage 0",
-    "test:ci": "jest --config jestconfig.json --ci --reporters='default' --reporters='./github-actions-reporter'",
+    "test": "jest --config jest.config.json",
+    "test:watch": "jest --config jest.config.json --watch --collectCoverage 0",
+    "test:ci": "jest --config jest.config.json --ci --reporters='default' --reporters='./github-actions-reporter'",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
