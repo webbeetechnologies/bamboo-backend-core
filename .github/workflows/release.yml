@@ -2,7 +2,7 @@ name: Node.js Package
 
 on:
   release:
-    types: [created]
+    types: [ created ]
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
 
   publish-gpr:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: bamboo
     permissions:
       packages: write
       contents: read
